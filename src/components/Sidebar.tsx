@@ -64,6 +64,14 @@ const Sidebar = () => {
           >
             <Icon icon="appointment" /> {!sidebarCollapsed && t('scheduling.label')}
           </ListItem>
+          <ListItem
+            active={pathname.split('/')[1].includes('labs')}
+            onClick={() => navigateTo('/labs')}
+            className="nav-item"
+            style={listItemStyle}
+          >
+            <Icon icon="lab" /> {!sidebarCollapsed && t('labs.label')}
+          </ListItem>
         </List>
       </div>
     </nav>
